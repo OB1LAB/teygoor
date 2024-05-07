@@ -20,6 +20,7 @@ body {
   gap: 10px;
   &.mobile {
     flex-direction: column;
+    padding-top: 30px;
   }
   .lines {
     display: flex;
