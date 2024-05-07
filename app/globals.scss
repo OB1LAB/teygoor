@@ -6,6 +6,7 @@
 
 body {
   background: #F2C710;
+  //overflow-y: hidden;
 }
 
 @font-face {
@@ -13,16 +14,4 @@ body {
   src: url("../public/fonts/Buffon-Regular.otf");
   font-weight: normal;
   font-style: normal;
-}
-
-::-webkit-scrollbar {
-  width: 4px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #bbbbbb;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #3c3c3c;
 }

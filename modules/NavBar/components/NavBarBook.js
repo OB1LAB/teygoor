@@ -2,13 +2,17 @@ import styles from "./NavBar.module.scss";
 import Link from "next/link";
 import tgIcon from "@/public/tgIcon.png";
 import xIcon from "@/public/xIcon.png";
-import radioInactive from "@/public/radioInactive.png";
+import whiteEllipse from "@/public/whiteEllipse.png";
 import Image from "next/image";
 
-const NavBar = () => {
+const NavBarBook = () => {
   return (
-    <nav className={styles.navBar}>
+    <nav className={styles.navBarBook}>
       <ul>
+        <li className={styles.whiteEllipse}>
+          <Image src={whiteEllipse} alt="whiteEllipse" />
+          <div>Yip-peeee!</div>
+        </li>
         <li className={styles.socials}>
           <Link href="/">
             <Image src={tgIcon} alt="tg" />
@@ -17,16 +21,9 @@ const NavBar = () => {
             <Image src={xIcon} alt="x" />
           </Link>
         </li>
-        <li>
-          <div className={styles.radio}>
-            <button>
-              <Image src={radioInactive} alt="radioInactive" />
-            </button>
-          </div>
-        </li>
       </ul>
     </nav>
   );
 };
 
-export default NavBar;
+export default NavBarBook;

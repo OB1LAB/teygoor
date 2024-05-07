@@ -1,0 +1,37 @@
+.bookPage {
+  height: 100vh;
+  background: #F1E9C0;
+}
+
+.book {
+  height: 600px;
+}
+
+.bookElement {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  .lines {
+    img {
+      width: auto;
+    }
+  }
+  .nextButton, .backButton {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    img {
+      width: auto;
+      height: 112px;
+    }
+  }
+  .backButton {
+    transform: rotate(-180deg);
+  }
+  .bookImage {
+    position: relative;
+    left: 90px;
+    top: -620px;
+  }
+}

@@ -1,5 +1,5 @@
 .page {
-  min-height: calc(100vh - 100px);
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,14 +80,16 @@
   align-items: center;
   margin-top: auto;
   gap: 12px;
-  button {
+  a {
     cursor: pointer;
     color: white;
-    font-size: 24px;
+    font-family: "Lora", serif;
+    font-size: 22px;
     clip-path: polygon(2% 16%, 97% 0, 100% 100%, 0 85%);
     padding: 20px;
     background: #245B9A;
     border: 0;
+    text-decoration: none;
   }
   :last-child {
     width: 500px;

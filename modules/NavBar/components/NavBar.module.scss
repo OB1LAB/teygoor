@@ -18,6 +18,10 @@
     justify-content: end;
     align-items: center;
     padding-left: 150px;
+    img {
+      height: 36px;
+      width: 36px;
+    }
   }
   .radio {
     display: flex;
@@ -29,6 +33,46 @@
       background: transparent;
       border: 0;
       cursor: pointer;
+    }
+    img {
+      height: auto;
+      width: 60px;
+    }
+  }
+}
+
+.navBarBook {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+  }
+  .whiteEllipse {
+    left: 20px;
+    position: relative;
+    height: auto;
+    width: 320px;
+    div {
+      top: 70px;
+      position: absolute;
+      font-family: "buffon", serif;
+      font-size: 58px;
+      left: 7px;
+    }
+  }
+  .socials {
+    display: flex;
+    position: relative;
+    top: 20px;
+    left: -157px;
+    gap: 10px;
+    img {
+      height: 32px;
+      width: 32px;
     }
   }
 }

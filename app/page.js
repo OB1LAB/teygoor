@@ -7,6 +7,8 @@ import catGrass from "@/public/catGrass.png";
 import bitEllipse from "@/public/bigEllipse.png";
 import Image from "next/image";
 import { ToastContainer, toast } from "react-toastify";
+import Link from "next/link";
+import { NavBar } from "@/modules/NavBar";
 const URL = "3WPep4ufaToK1aS5s8BL9inzeUrt4DYaQCiic6ZkkC1U";
 
 export default function Home() {
@@ -25,6 +27,7 @@ export default function Home() {
         hideProgressBar
         className="notify"
       />
+      <NavBar />
       <div className="cat">
         <Image src={ellipse} alt="ellipse" />
         <Image src={cat} alt="cat" />
@@ -41,7 +44,7 @@ export default function Home() {
         <div>SOLANA MEMECOIN</div>
       </div>
       <div className="rm">
-        <button>READ MORE!</button>
+        <Link href="book">READ MORE!</Link>
         <div>
           <Image src={catGrass} alt="catGrass" />
           <Image src={bitEllipse} alt="bigEllipse" />
