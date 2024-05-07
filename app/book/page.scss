@@ -33,5 +33,12 @@
     position: relative;
     left: 90px;
     top: -620px;
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform-origin: 0 0;
+      transition: transform 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
   }
 }

@@ -1,6 +1,6 @@
 "use client";
 import "./page.scss";
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import prevIcon from "@/public/prevIcon.png";
 import yellowLine from "@/public/yellowLine.png";
 import redLine from "@/public/redLine.png";
@@ -26,6 +26,7 @@ function coefficientHeight() {
 }
 
 export default function Book() {
+  const bookRef = useRef();
   const [page, setPage] = useState(0);
   const [pages, setPages] = useState([]);
   const coefHeight = coefficientHeight();
@@ -37,12 +38,16 @@ export default function Book() {
   }, []);
   const incrementPage = () => {
     if (page < maxPage) {
-      setPage(page + 1);
+      bookRef.current.children[page].style.transform = `rotateY(90deg)`;
+      setTimeout(() => {
+        setPage(page + 1);
+      }, 900);
     }
   };
   const decrementPage = () => {
     if (page > 0) {
       setPage(page - 1);
+      bookRef.current.children[page - 1].style.transform = `rotateY(0deg)`;
     }
   };
   return (
@@ -62,12 +67,10 @@ export default function Book() {
             <Image height={720 * coefHeight} src={redLine} alt="redLine" />
             <Image height={703 * coefHeight} src={blueLine} alt="blueLine" />
           </div>
-          <div className="bookImage">
+          <div className="bookImage" ref={bookRef}>
             {pages.map((pageBook, pageIndex) => (
               <Image
-                style={{
-                  display: `${pageIndex === page ? "block" : "none"}`,
-                }}
+                style={{ zIndex: maxPage - pageIndex }}
                 src={pageBook}
                 width={550}
                 height={570}
