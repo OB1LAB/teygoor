@@ -21,7 +21,9 @@ export default function Home() {
         autoClose={1500}
         closeButton={true}
         pauseOnHover={false}
-        theme="dark"
+        theme="colored"
+        hideProgressBar
+        className="notify"
       />
       <div className="cat">
         <Image src={ellipse} alt="ellipse" />
@@ -32,11 +34,11 @@ export default function Home() {
         <div>TEYGOOR</div>
       </div>
       <div className="url">
-        <div>SOLANA MEMECOIN</div>
-        <div>
+        <div onClick={copyUrlSte}>
           <div>{URL}</div>
-          <button onClick={copyUrlSte}>COPY</button>
+          <button>COPY</button>
         </div>
+        <div>SOLANA MEMECOIN</div>
       </div>
       <div className="rm">
         <button>READ MORE!</button>

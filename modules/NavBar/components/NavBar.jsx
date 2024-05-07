@@ -3,7 +3,6 @@ import Link from "next/link";
 import tgIcon from "@/public/tgIcon.svg";
 import xIcon from "@/public/xIcon.svg";
 import radioInactive from "@/public/radioInactive.png";
-import radioActive from "@/public/radioActive.png";
 import Image from "next/image";
 
 const NavBar = () => {
@@ -22,9 +21,6 @@ const NavBar = () => {
           <div className={styles.radio}>
             <button>
               <Image src={radioInactive} alt="radioInactive" />
-            </button>
-            <button>
-              <Image src={radioActive} alt="radioActive" />
             </button>
           </div>
         </li>

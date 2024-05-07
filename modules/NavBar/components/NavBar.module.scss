@@ -23,14 +23,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 27px;
     button {
+      top: 10px;
+      position: relative;
       background: transparent;
       border: 0;
       cursor: pointer;
-      :last-child {
-        mix-blend-mode: darken;
-      }
     }
   }
 }
