@@ -1,38 +1,58 @@
-.bookPage {
-  height: 100vh;
+.book {
+  position: relative;
+}
+
+body {
+  overflow: hidden;
   background: #F1E9C0;
 }
 
-.book {
-  height: 600px;
+.bookPage {
+  height: 100vh;
+  background: #F1E9C0;
 }
 
 .bookElement {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   gap: 10px;
+  &.mobile {
+    flex-direction: column;
+  }
   .lines {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 30px;
     img {
       width: auto;
     }
   }
   .nextButton, .backButton {
+    height: min-content;
     background: transparent;
     border: 0;
     cursor: pointer;
     img {
       width: auto;
-      height: 112px;
     }
   }
   .backButton {
     transform: rotate(-180deg);
   }
+  .mobileButtons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
   .bookImage {
-    position: relative;
-    left: 90px;
-    top: -620px;
+    width: 0;
+    height: 0;
+    position: absolute;
+    box-shadow: 0 24px 48px 0 rgba(0,0,0,0.16);
     img {
       position: absolute;
       left: 0;
