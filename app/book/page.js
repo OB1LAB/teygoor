@@ -87,7 +87,10 @@ export default function Book() {
               width: `${getCoef(606)}px`,
               height: `${getCoef(620)}px`,
               top: `${(getCoef(748) - getCoef(590)) / 2}px`,
-              left: `${width < mobileWidth ? `${(width - getCoef(606)) / 2}px` : (getCoef(250.5) + getCoef(278) + getCoef(250.5) + 60 - getCoef(606)) / 2}px`,
+              left:
+                width < mobileWidth
+                  ? `${(width - getCoef(606)) / 2}px`
+                  : `${(getCoef(250.5) + getCoef(278) + getCoef(250.5) + 60 - getCoef(606)) / 2}px`,
             }}
           >
             {pages.map((pageBook, pageIndex) => (
