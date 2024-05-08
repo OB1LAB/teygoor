@@ -18,6 +18,9 @@
     justify-content: start;
     align-items: center;
     padding-left: 100px;
+    @media (max-width: 600px) {
+      padding-left: 20px;
+    }
     img {
       height: 36px;
       width: 36px;
@@ -30,6 +33,9 @@
   justify-content: end;
   align-items: center;
   padding-right: 100px;
+  @media (max-width: 600px) {
+    padding-right: 20px;
+  }
   button {
     position: relative;
     background: transparent;
