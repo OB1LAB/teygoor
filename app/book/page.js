@@ -58,7 +58,7 @@ export default function Book() {
   };
   const getCoef = (elementSize) => {
     if (width < 500) {
-      return (430 / 1920) * elementSize;
+      return (900 / 1920) * elementSize;
     }
     if (width < 1100) {
       return (1100 / 1920) * elementSize;
@@ -66,7 +66,7 @@ export default function Book() {
     if (width + height === 0) {
       return 0.5 * elementSize;
     }
-    return Math.max(width / 1920, height / 1000) * elementSize;
+    return Math.min(width / 1920, height / 1000) * elementSize;
   };
   return (
     <div className="bookPage">
