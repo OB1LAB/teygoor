@@ -23,33 +23,47 @@
       width: 36px;
     }
   }
-  .radio {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    button {
-      top: 10px;
-      position: relative;
-      background: transparent;
-      border: 0;
-      cursor: pointer;
-    }
-    img {
-      height: auto;
-      width: 60px;
-    }
+}
+
+.radio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  button {
+    position: relative;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+  img {
+    height: auto;
+    width: 60px;
   }
 }
 
 .navBarBook {
   display: flex;
-  width: 100%;
   align-items: center;
   justify-content: center;
   ul {
     display: flex;
     flex-direction: row;
     list-style-type: none;
+  }
+  .radio {
+    position: absolute;
+    padding-top: 30px;
+    padding-left: 100px;
+    @media (max-width: 730px) {
+      padding-left: 10px;
+    }
+    @media (max-width: 600px) {
+      padding-left: 0;
+    }
+    @media (max-width: 501px) {
+      padding-top: 130px;
+      right: 25px;
+    }
   }
   .whiteEllipse {
     left: 45px;

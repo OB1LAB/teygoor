@@ -19,7 +19,6 @@ export default function RootLayout({ children }) {
         <link rel="shortcut icon" href="favicon.png" />
       </head>
       <body className={inter.className}>
-        {/*<header>{<NavBar />}</header>*/}
         <main className="main">{children}</main>
         <div className="paper" />
       </body>

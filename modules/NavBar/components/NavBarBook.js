@@ -4,8 +4,14 @@ import tgIcon from "@/public/tgIcon.png";
 import xIcon from "@/public/xIcon.png";
 import whiteEllipse from "@/public/whiteEllipse.png";
 import Image from "next/image";
+import radioInactive from "@/public/radioInactive.png";
+import useRadioStore from "@/components/useRadioStore";
 
 const NavBarBook = () => {
+  const [isRadioActive, setIsRadioActive] = useRadioStore((store) => [
+    store.isRunning,
+    store.setIsRunning,
+  ]);
   return (
     <nav className={styles.navBarBook}>
       <ul>
@@ -20,6 +26,16 @@ const NavBarBook = () => {
           <Link href="/">
             <Image src={xIcon} alt="x" />
           </Link>
+        </li>
+        <li>
+          <div className={styles.radio}>
+            <button
+              onClick={() => setIsRadioActive(!isRadioActive)}
+              style={{ mixBlendMode: isRadioActive ? "darken" : "" }}
+            >
+              <Image src={radioInactive} alt="radioInactive" />
+            </button>
+          </div>
         </li>
       </ul>
     </nav>
