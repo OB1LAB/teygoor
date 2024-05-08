@@ -9,6 +9,17 @@ body {
   overflow-y: hidden;
 }
 
+.paper {
+  background-image: url("/paper.png");
+  opacity: 0.05;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
 @keyframes flashlight {
   0% {
     left: 0;
@@ -18,29 +29,57 @@ body {
     left: 0;
     top: -1px;
   }
+  15% {
+    left: -2px;
+    top: -4px;
+  }
   20% {
     left: -3px;
     top: -7px;
+  }
+  25% {
+    left: -4px;
+    top: -9px;
   }
   30% {
     left: -5px;
     top: -11px;
   }
+  35% {
+    left: -3px;
+    top: -12px;
+  }
   40% {
     left: 0;
     top: -12px;
+  }
+  45% {
+    left: 1px;
+    top: -11px;
   }
   50% {
     left: 3px;
     top: -11px;
   }
+  55% {
+    left: 5px;
+    top: -10px;
+  }
   60% {
     left: 8px;
     top: -10px;
   }
+  65% {
+    left: 6px;
+    top: -7px;
+  }
   70% {
     left: 5px;
     top: -5px;
+  }
+  75% {
+    left: 4px;
+    top: -4px;
   }
   80% {
     left: 3px;

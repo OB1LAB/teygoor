@@ -21,6 +21,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         {/*<header>{<NavBar />}</header>*/}
         <main className="main">{children}</main>
+        <div className="paper" />
       </body>
     </html>
   );

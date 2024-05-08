@@ -20,7 +20,7 @@
     position: relative;
   }
   :first-child {
-    animation: flashlight 2s ease-in-out infinite
+    animation: flashlight 2.5s ease-in-out infinite
   }
   :last-child {
     left: -273px;
@@ -129,6 +129,11 @@
       left: 20px;
       bottom: -100px;
     }
+    @media (max-height: 800px) {
+      position: relative;
+      bottom: -17px;
+      left: -105px;
+    }
     :first-child {
       position: relative;
       bottom: 40px;
@@ -141,7 +146,7 @@
       @media (max-width: 600px) {
         width: 450px;
       }
-      animation: flashlight 1.5s ease-out infinite
+      animation: flashlight 2.5s ease-out infinite
     }
   }
 }
