@@ -17,6 +17,7 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css?family=Lora"
           rel="stylesheet"
         />
+        <link rel="shortcut icon" href="favicon.png" />
       </head>
       <body className={inter.className}>
         {/*<header>{<NavBar />}</header>*/}
