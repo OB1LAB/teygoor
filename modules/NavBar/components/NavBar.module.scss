@@ -55,6 +55,9 @@
     position: fixed;
     top: 21px;
     right: 100px;
+    @media (max-width: 600px) {
+      right: 30px;
+    }
     padding-right: 0;
   }
   .whiteEllipse {
@@ -75,6 +78,9 @@
     position: fixed;
     top: 30px;
     left: 100px;
+    @media (max-width: 600px) {
+      left: 30px;
+    }
     gap: 0;
     img, a {
       height: 36px;
