@@ -8,9 +8,10 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const NavBar = () => {
-  const [audio] = useState(new Audio("audio.mp3"));
+  const [audio, setAudio] = useState(null);
   const [isRadioActive, setIsRadioActive] = useState(false);
   useEffect(() => {
+    setAudio(new Audio("audio.mp3"));
     isRadioActive ? audio.play() : audio.pause();
   }, [isRadioActive]);
   return (
