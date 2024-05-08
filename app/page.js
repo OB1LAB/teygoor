@@ -9,13 +9,33 @@ import Image from "next/image";
 import { ToastContainer, toast } from "react-toastify";
 import Link from "next/link";
 import { NavBar } from "@/modules/NavBar";
+import { useEffect, useRef } from "react";
 const URL = "3WPep4ufaToK1aS5s8BL9inzeUrt4DYaQCiic6ZkkC1U";
 
+const random = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+
 export default function Home() {
+  const topEllipseRef = useRef(null);
+  const bottomEllipseRef = useRef(null);
+
   const copyUrlSte = () => {
     navigator.clipboard.writeText(URL);
     toast("Copied!", { type: "success" });
   };
+  useEffect(() => {
+    if (!topEllipseRef) return;
+    setInterval(() => {
+      topEllipseRef.current.style.transform = `translate3d(${random(-1, 1)}px, ${random(-1, 1)}px, 0px)`;
+    }, 500);
+  }, [topEllipseRef]);
+  useEffect(() => {
+    if (!bottomEllipseRef) return;
+    setInterval(() => {
+      bottomEllipseRef.current.style.transform = `translate3d(${random(-1, 1)}px, ${random(-1, 1)}px, 0px)`;
+    }, 500);
+  }, [bottomEllipseRef]);
   return (
     <div className="page">
       <ToastContainer
@@ -29,7 +49,7 @@ export default function Home() {
       />
       <NavBar />
       <div className="cat">
-        <Image src={ellipse} alt="ellipse" />
+        <Image ref={topEllipseRef} src={ellipse} alt="ellipse" />
         <Image src={cat} alt="cat" />
       </div>
       <div className="about">
@@ -47,7 +67,7 @@ export default function Home() {
         <Link href="book">READ MORE!</Link>
         <div>
           <Image src={catGrass} alt="catGrass" />
-          <Image src={bitEllipse} alt="bigEllipse" />
+          <Image ref={bottomEllipseRef} src={bitEllipse} alt="bigEllipse" />
         </div>
       </div>
     </div>
