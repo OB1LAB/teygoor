@@ -12,7 +12,9 @@ const NavBar = () => {
   const [isRadioActive, setIsRadioActive] = useState(false);
   useEffect(() => {
     setAudio(new Audio("audio.mp3"));
-    isRadioActive && audio ? audio.play() : audio.pause();
+    if (audio) {
+      isRadioActive ? audio.play() : audio.pause();
+    }
   }, [isRadioActive]);
   return (
     <nav className={styles.navBar}>
