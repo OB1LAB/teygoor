@@ -7,8 +7,9 @@ import redLine from "@/public/redLine.png";
 import blueLine from "@/public/blueLine.png";
 import Image from "next/image";
 import { NavBarBook } from "@/modules/NavBar";
+import { useRouter } from "next/navigation";
 
-const maxPage = 5;
+const maxPage = 6;
 const mobileWidth = 660;
 
 function getSize() {
@@ -27,6 +28,7 @@ function getSize() {
 }
 
 export default function Book() {
+  const router = useRouter();
   const bookRef = useRef();
   const [page, setPage] = useState(0);
   const [pages, setPages] = useState([]);
@@ -49,6 +51,8 @@ export default function Book() {
     if (page > 0) {
       setPage(page - 1);
       bookRef.current.children[page - 1].style.transform = `rotateY(0deg)`;
+    } else {
+      router.push("/");
     }
   };
   const getCoef = (elementSize) => {

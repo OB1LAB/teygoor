@@ -4,6 +4,7 @@ import { create } from "zustand";
 export default create()((set, get) => ({
   radio: null,
   isRunning: false,
+  fistClick: false,
   setIsRunning: (radioState) => {
     const radioMusic = get().radio;
     if (radioMusic === null) {
@@ -16,6 +17,12 @@ export default create()((set, get) => ({
       radioMusic.play();
     } else {
       radioMusic.pause();
+    }
+  },
+  firstRun: () => {
+    if (!get().fistClick) {
+      set({ fistClick: true });
+      get().setIsRunning(true);
     }
   },
 }));

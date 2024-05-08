@@ -6,12 +6,20 @@ import xIcon from "@/public/xIcon.png";
 import radioInactive from "@/public/radioInactive.png";
 import Image from "next/image";
 import useRadioStore from "@/components/useRadioStore";
+import { useEffect } from "react";
 
 const NavBar = () => {
   const [isRadioActive, setIsRadioActive] = useRadioStore((store) => [
     store.isRunning,
     store.setIsRunning,
   ]);
+  const firstRunRadio = useRadioStore((store) => store.firstRun);
+  useEffect(() => {
+    document.addEventListener("click", firstRunRadio, true);
+    return () => {
+      document.removeEventListener("click", firstRunRadio, true);
+    };
+  }, []);
   return (
     <nav className={styles.navBar}>
       <ul>

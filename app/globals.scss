@@ -20,6 +20,25 @@ body {
   pointer-events: none;
 }
 
+@keyframes rotateButton {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+  25% {
+    margin-right: 5px;
+    transform: scale(1.1) rotate(4deg);
+  }
+  50% {
+    transform: scale(1) rotate(0);
+  }
+  75% {
+    transform: scale(1.1) rotate(-4deg);
+  }
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
 @keyframes flashlight {
   0% {
     left: 0;

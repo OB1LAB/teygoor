@@ -6,12 +6,20 @@ import whiteEllipse from "@/public/whiteEllipse.png";
 import Image from "next/image";
 import radioInactive from "@/public/radioInactive.png";
 import useRadioStore from "@/components/useRadioStore";
+import { useEffect } from "react";
 
 const NavBarBook = () => {
+  const firstRunRadio = useRadioStore((store) => store.firstRun);
   const [isRadioActive, setIsRadioActive] = useRadioStore((store) => [
     store.isRunning,
     store.setIsRunning,
   ]);
+  useEffect(() => {
+    document.addEventListener("click", firstRunRadio, true);
+    return () => {
+      document.removeEventListener("click", firstRunRadio, true);
+    };
+  }, []);
   return (
     <nav className={styles.navBarBook}>
       <ul>
