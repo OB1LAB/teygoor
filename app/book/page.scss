@@ -8,6 +8,8 @@ body {
 }
 
 .bookPage {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   background: #F1E9C0;
 }
@@ -20,7 +22,7 @@ body {
   gap: 10px;
   &.mobile {
     flex-direction: column;
-    padding-top: 30px;
+    margin: auto 0;
   }
   .lines {
     display: flex;
@@ -48,6 +50,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
+    align-items: center;
   }
   .bookImage {
     width: 0;
