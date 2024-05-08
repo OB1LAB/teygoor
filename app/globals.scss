@@ -9,53 +9,6 @@ body {
   overflow-y: hidden;
 }
 
-@keyframes flashlight {
-  0% {
-    left: 0;
-    top: 0;
-  }
-  10% {
-    left: 0;
-    top: -1px;
-  }
-  20% {
-    left: -3px;
-    top: -7px;
-  }
-  30% {
-    left: -5px;
-    top: -11px;
-  }
-  40% {
-    left: 0;
-    top: -12px;
-  }
-  50% {
-    left: 3px;
-    top: -11px;
-  }
-  60% {
-    left: 8px;
-    top: -10px;
-  }
-  70% {
-    left: 5px;
-    top: -5px;
-  }
-  80% {
-    left: 3px;
-    top: -3px;
-  }
-  90% {
-    left: 2px;
-    top: -2px;
-  }
-  100% {
-    left: 1px;
-    top: -1px;
-  }
-}
-
 @font-face {
   font-family: "buffon";
   src: url("../public/fonts/Buffon-Regular.otf");
