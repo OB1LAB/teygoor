@@ -5,6 +5,7 @@ import prevIcon from "@/public/prevIcon.png";
 import yellowLine from "@/public/yellowLine.png";
 import redLine from "@/public/redLine.png";
 import blueLine from "@/public/blueLine.png";
+import arrowIcon from "@/public/arrow.svg";
 import Image from "next/image";
 import { NavBarBook } from "@/modules/NavBar";
 import { useRouter } from "next/navigation";
@@ -74,8 +75,15 @@ export default function Book() {
         className={width < mobileWidth ? `bookElement mobile` : `bookElement`}
       >
         {!(width < mobileWidth) && (
-          <button className="nextButton" onClick={decrementPage}>
-            <Image src={prevIcon} height={getCoef(112)} alt="back" />
+          <button
+            className="nextButton"
+            onClick={decrementPage}
+            style={{
+              transform: `scale(${getCoef(1)})`,
+            }}
+          >
+            <div className="arrow" />
+            <Image src={arrowIcon} alt="arrow" />
           </button>
         )}
         <div className="book">
@@ -111,16 +119,37 @@ export default function Book() {
         </div>
         {width < mobileWidth ? (
           <div className="mobileButtons">
-            <button className="nextButton" onClick={decrementPage}>
-              <Image src={prevIcon} height={getCoef(112)} alt="back" />
+            <button
+              className="nextButton"
+              onClick={decrementPage}
+              style={{
+                transform: `scale(${getCoef(1)})`,
+              }}
+            >
+              <div className="arrow" />
+              <Image src={arrowIcon} alt="arrow" />
             </button>
-            <button className="backButton" onClick={incrementPage}>
-              <Image src={prevIcon} height={getCoef(112)} alt="next" />
+            <button
+              className="backButton"
+              onClick={incrementPage}
+              style={{
+                transform: `scale(${getCoef(1)})`,
+              }}
+            >
+              <div className="arrow" />
+              <Image src={arrowIcon} alt="arrow" />
             </button>
           </div>
         ) : (
-          <button className="backButton" onClick={incrementPage}>
-            <Image src={prevIcon} height={getCoef(112)} alt="next" />
+          <button
+            className="backButton"
+            onClick={incrementPage}
+            style={{
+              transform: `scale(${getCoef(1)})`,
+            }}
+          >
+            <div className="arrow" />
+            <Image src={arrowIcon} alt="arrow" />
           </button>
         )}
       </div>

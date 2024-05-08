@@ -10,14 +10,15 @@ body {
 }
 
 .paper {
-  background-image: url("/paper.png");
-  opacity: 0.05;
+  background-image: url("/paper.jpg");
+  opacity: 0.1;
   position: absolute;
   width: 100vw;
   height: 100vh;
   top: 0;
   z-index: 1;
   pointer-events: none;
+  background-blend-mode: exclusion;
 }
 
 @keyframes rotateButton {
@@ -36,6 +37,15 @@ body {
   }
   100% {
     transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes rotateArrows {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 

@@ -39,7 +39,7 @@ const NavBarBook = () => {
           <div className={styles.radio}>
             <button
               onClick={() => setIsRadioActive(!isRadioActive)}
-              style={{ mixBlendMode: isRadioActive ? "darken" : "" }}
+              style={{ mixBlendMode: !isRadioActive ? "darken" : "" }}
             >
               <Image src={radioInactive} alt="radioInactive" />
             </button>

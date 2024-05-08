@@ -6,6 +6,7 @@ export default create()((set, get) => ({
   isRunning: false,
   fistClick: false,
   setIsRunning: (radioState) => {
+    if (!get().fistClick) return;
     const radioMusic = get().radio;
     if (radioMusic === null) {
       set({ radio: new Audio("audio.mp3") });
@@ -22,7 +23,9 @@ export default create()((set, get) => ({
   firstRun: () => {
     if (!get().fistClick) {
       set({ fistClick: true });
-      get().setIsRunning(true);
+      setTimeout(() => {
+        get().setIsRunning(true);
+      }, 10);
     }
   },
 }));

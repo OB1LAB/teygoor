@@ -33,12 +33,45 @@
     background: transparent;
     border: 0;
     cursor: pointer;
+    position: relative;
+    img {
+      position: absolute;
+      top: 25px;
+      left: 30px;
+    }
+    .arrow {
+      width: 80px;
+      height: 80px;
+      margin: 10px;
+      background: #D7695A;
+      position: relative;
+      animation: rotateArrows 6s linear infinite;
+    }
+    .arrow:before,
+    .arrow:after {
+      content: "";
+      height: 80px;
+      width: 80px;
+      background: inherit;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .arrow:before {
+      transform: rotate(30deg);
+    }
+    .arrow:after {
+      transform: rotate(60deg);
+    }
     img {
       width: auto;
     }
   }
-  .backButton {
+  .nextButton img {
     transform: rotate(-180deg);
+  }
+  .backButton img {
+    left: 35px;
   }
   .mobileButtons {
     width: 100%;

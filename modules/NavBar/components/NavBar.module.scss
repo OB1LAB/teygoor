@@ -15,9 +15,9 @@
   }
   .socials {
     display: flex;
-    justify-content: end;
+    justify-content: start;
     align-items: center;
-    padding-left: 150px;
+    padding-left: 100px;
     img {
       height: 36px;
       width: 36px;
@@ -27,8 +27,9 @@
 
 .radio {
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
+  padding-right: 100px;
   button {
     position: relative;
     background: transparent;
@@ -51,19 +52,10 @@
     list-style-type: none;
   }
   .radio {
-    position: absolute;
-    padding-top: 30px;
-    padding-left: 100px;
-    @media (max-width: 730px) {
-      padding-left: 10px;
-    }
-    @media (max-width: 600px) {
-      right: 10px;
-    }
-    @media (max-width: 501px) {
-      padding-top: 130px;
-      right: 25px;
-    }
+    position: fixed;
+    top: 21px;
+    right: 100px;
+    padding-right: 0;
   }
   .whiteEllipse {
     left: 45px;
@@ -80,13 +72,13 @@
   }
   .socials {
     display: flex;
-    position: relative;
-    top: 20px;
-    left: -130px;
-    gap: 10px;
+    position: fixed;
+    top: 30px;
+    left: 100px;
+    gap: 0;
     img, a {
-      height: 32px;
-      width: 32px;
+      height: 36px;
+      width: 36px;
     }
   }
 }
