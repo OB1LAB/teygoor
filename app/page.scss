@@ -23,12 +23,11 @@
   @media (max-height: 680px) {
     height: 100px;
     width: 122px;
-    margin-left: 110px;
   }
   :first-child {
     animation: flashlight 2.5s ease-in-out infinite;
     @media (max-width: 800px) and (min-height: 681px) {
-      height: auto;
+      height: 76px;
       width: 188px;
     }
     @media (max-height: 680px) {
