@@ -42,12 +42,24 @@
     @media (max-width: 800px) {
       font-size: 20px;
     }
+    @media (max-width: 600px) {
+      font-size: 16px;
+    }
+    @media (max-width: 501px) {
+      font-size: 14px;
+    }
   }
   :last-child {
     font-family: "buffon", serif;
     font-size: 96px;
     @media (max-width: 800px) {
       font-size: 58px;
+    }
+    @media (max-width: 600px) {
+      font-size: 40px;
+    }
+    @media (max-width: 501px) {
+      font-size: 36px;
     }
   }
 }
@@ -89,6 +101,9 @@
       @media (max-width: 800px) {
         font-size: 16px;
         font-weight: 600;
+      }
+      @media (max-width: 600px) {
+        font-size: 14px;
       }
     }
     :first-child {
