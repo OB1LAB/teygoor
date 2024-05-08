@@ -17,6 +17,10 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
         <link rel="shortcut icon" href="favicon.png" />
+        <meta
+          name="viewport"
+          content="width=device-width,height=device-height,user-scalable=no"
+        />
       </head>
       <body className={inter.className}>
         <main className="main">{children}</main>
