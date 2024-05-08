@@ -15,7 +15,7 @@ const NavBar = () => {
     if (audio) {
       isRadioActive ? audio.play() : audio.pause();
     }
-  }, [isRadioActive, audio]);
+  }, [isRadioActive]);
   return (
     <nav className={styles.navBar}>
       <ul>
