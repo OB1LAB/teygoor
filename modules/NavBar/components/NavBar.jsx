@@ -5,19 +5,13 @@ import tgIcon from "@/public/tgIcon.png";
 import xIcon from "@/public/xIcon.png";
 import radioInactive from "@/public/radioInactive.png";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import useRadioStore from "@/components/useRadioStore";
 
 const NavBar = () => {
-  const [audio, setAudio] = useState(null);
-  const [isRadioActive, setIsRadioActive] = useState(false);
-  useEffect(() => {
-    setAudio(new Audio("audio.mp3"));
-  }, []);
-  useEffect(() => {
-    if (audio) {
-      isRadioActive ? audio.play() : audio.pause();
-    }
-  }, [isRadioActive, audio]);
+  const [isRadioActive, setIsRadioActive] = useRadioStore((store) => [
+    store.isRunning,
+    store.setIsRunning,
+  ]);
   return (
     <nav className={styles.navBar}>
       <ul>
@@ -32,7 +26,7 @@ const NavBar = () => {
         <li>
           <div className={styles.radio}>
             <button
-              onClick={() => setIsRadioActive((prevState) => !prevState)}
+              onClick={() => setIsRadioActive(!isRadioActive)}
               style={{ mixBlendMode: isRadioActive ? "darken" : "" }}
             >
               <Image src={radioInactive} alt="radioInactive" />

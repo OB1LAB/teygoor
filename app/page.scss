@@ -19,6 +19,9 @@
   img {
     position: relative;
   }
+  :first-child {
+    animation: flashlight 2s ease-in-out infinite
+  }
   :last-child {
     left: -273px;
     top: -27px;
@@ -103,7 +106,7 @@
   gap: 42px;
   margin-top: 80px;
   @media (max-width: 800px) {
-    margin-top: 80px;
+    margin-top: 40px;
   }
   a {
     cursor: pointer;
@@ -119,21 +122,26 @@
   :last-child {
     width: 500px;
     display: flex;
-    position: relative;
-    @media (max-width: 800px) {
+    position: absolute;
+    bottom: -100px;
+    @media (max-width: 600px) {
       width: 250px;
-      left: -90px;
-      bottom: -70px;
+      left: 20px;
+      bottom: -100px;
+    }
+    :first-child {
+      position: relative;
+      bottom: 40px;
+      left: 30px;
     }
     :last-child {
       width: 538px;
-      left: -500px;
-      top: 68px;
       z-index: -1;
-      @media (max-width: 800px) {
+      position: absolute;
+      @media (max-width: 600px) {
         width: 450px;
-        left: -450px;
       }
+      animation: flashlight 1.5s ease-out infinite
     }
   }
 }
