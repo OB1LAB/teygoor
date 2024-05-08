@@ -20,7 +20,7 @@
   img {
     position: relative;
   }
-  @media (max-height: 680px) or (min-width: 2000px) {
+  @media (max-height: 680px) {
     height: 100px;
     width: 122px;
   }
@@ -33,7 +33,7 @@
       height: 76px;
       width: 188px;
     }
-    @media (max-height: 680px) or (min-width: 2000px) {
+    @media (max-height: 680px) {
       height: 82px;
       width: 201px;
     }
@@ -47,7 +47,7 @@
       left: -110px;
       top: -15px;
     }
-    @media (max-height: 680px) or (min-width: 2000px) {
+    @media (max-height: 680px) {
       height: 88px;
       width: 244px;
       left: -122px;
@@ -83,7 +83,7 @@
     @media (max-width: 800px) {
       font-size: 58px;
     }
-    @media (max-width: 600px) or (min-width: 2000px) {
+    @media (max-width: 600px) {
       font-size: 40px;
     }
   }
@@ -97,7 +97,7 @@
   padding-top: 30px;
   font-size: 28px;
   font-family: "Lora", serif;
-  @media (max-width: 800px) or (min-width: 2000px) {
+  @media (max-width: 800px) {
     font-size: 20px;
     width: 100%;
     padding: 0 40px;
@@ -124,7 +124,7 @@
       margin-right: 20px;
       font-size: 24px;
       font-family: "Lora", serif;
-      @media (max-width: 800px) or (min-width: 2000px) {
+      @media (max-width: 800px) {
         font-size: 16px;
         font-weight: 600;
       }
@@ -146,7 +146,7 @@
   align-items: center;
   gap: 42px;
   margin-top: 80px;
-  @media (max-width: 800px) or (min-width: 2000px) {
+  @media (max-width: 800px) {
     margin-top: 20px;
   }
   a {
@@ -160,7 +160,7 @@
     border: 0;
     text-decoration: none;
     animation: rotateButton 2.5s ease-out infinite;
-    @media (max-height: 800px) or (min-width: 2000px) {
+    @media (max-height: 800px) {
       font-size: 16px;
     }
   }
@@ -174,7 +174,7 @@
       left: 20px;
       bottom: -100px;
     }
-    @media (max-height: 800px) or (min-width: 2000px) {
+    @media (max-height: 800px) {
       position: relative;
       bottom: -47px;
       left: -105px;
@@ -183,7 +183,7 @@
       position: relative;
       bottom: 70px;
       left: 30px;
-      @media (max-height: 800px) or (min-width: 2000px) {
+      @media (max-height: 800px) {
         height: 150px;
         bottom: 40px;
         left: 70px;
