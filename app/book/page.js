@@ -43,7 +43,7 @@ export default function Book() {
   const incrementPage = () => {
     if (page < maxPage) {
       bookRef.current.children[page].style.transform =
-        `rotateY(90deg) skewY(-10deg)`;
+        `rotateY(90deg) skewY(-25deg)`;
       setTimeout(() => {
         setPage(page + 1);
       }, 900);
