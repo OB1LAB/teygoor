@@ -80,11 +80,30 @@
     padding: 0 20px;
     align-items: center;
   }
+  .vignette {
+    position: absolute;
+    z-index: 10;
+    opacity: 0.6;
+    webkit-box-shadow:
+            inset 0 0 25px #A69B7E,
+            inset 0 0 25px #A69B7E,
+            inset 0 0 25px #A69B7E;
+
+    -moz-box-shadow:
+            inset 0 0 25px #A69B7E,
+            inset 0 0 25px #A69B7E,
+            inset 0 0 25px #A69B7E;
+
+    box-shadow:
+            inset 0 0 25px #A69B7E,
+            inset 0 0 25px #A69B7E,
+            inset 0 0 25px #A69B7E;
+  }
   .bookImage {
     width: 0;
     height: 0;
     position: absolute;
-    box-shadow: 0 24px 48px 0 rgba(0,0,0,0.16);
+    overflow: hidden;
     img {
       position: absolute;
       left: 0;

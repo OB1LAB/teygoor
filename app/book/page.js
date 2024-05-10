@@ -88,6 +88,18 @@ export default function Book() {
           </button>
         )}
         <div className="book">
+          <div
+            className="vignette"
+            style={{
+              width: `${getCoef(606)}px`,
+              height: `${getCoef(620)}px`,
+              top: `${(getCoef(748) - getCoef(590)) / 2}px`,
+              left:
+                width < mobileWidth
+                  ? `${(width - getCoef(606)) / 2}px`
+                  : `${(getCoef(250.5) + getCoef(278) + getCoef(250.5) + 60 - getCoef(606)) / 2}px`,
+            }}
+          />
           <div className="lines">
             <Image height={getCoef(748)} src={yellowLine} alt="yellowLine" />
             <Image height={getCoef(720)} src={redLine} alt="redLine" />
